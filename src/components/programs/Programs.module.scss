@@ -1,0 +1,68 @@
+@import '../../scss/variables.scss';
+
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+
+  &__header {
+    display: flex;
+    gap: 5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
+  &__categories {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__join_btn {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__img {
+    width: 1rem;
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  padding: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+
+  &__title {
+  }
+
+  &__icon {
+    fill: white;
+    & > svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    line-height: 25px;
+  }
+
+  &:hover {
+    background: $planCard;
+    cursor: pointer;
+  }
+}
