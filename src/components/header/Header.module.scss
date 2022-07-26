@@ -1,0 +1,27 @@
+@import '../../scss/variables.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    width: 10rem;
+    height: 3rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    color: white;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
