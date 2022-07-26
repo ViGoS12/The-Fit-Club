@@ -12,7 +12,7 @@ const Testimonials = () => {
   const testimonialsLength = testimonialsData.length
 
   return (
-    <div className={styles.testimonials}>
+    <div className={styles.testimonials} id='testimonials'>
       <div className={styles.testimonials__leftside}>
         <span className={styles.testimonials__subtitle}>Testimonials</span>
         <span className={classNames('stroke-text', styles.testimonials__title)}>
