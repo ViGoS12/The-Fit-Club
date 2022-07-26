@@ -1,0 +1,78 @@
+@import '../../scss/variables.scss';
+
+.testimonials {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem;
+
+  &__leftside {
+    display: flex;
+    flex: 1 1;
+    gap: 2rem;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+
+  &__rightside {
+    position: relative;
+    flex: 1;
+  }
+
+  &__subtitle {
+    color: $orange;
+    font-weight: bold;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  &__slider {
+    text-transform: none;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 40px;
+  }
+
+  &__img {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    object-fit: cover;
+    right: 8rem;
+    top: 2rem;
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+  }
+
+  &__arrow {
+    width: 1.5rem;
+    cursor: pointer;
+  }
+
+  &__rectangle {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    border: 2px solid orange;
+    background-color: transparent;
+    right: 9rem;
+    top: 0.9rem;
+  }
+
+  &__back_rectangle {
+    position: absolute;
+    width: 17rem;
+    height: 19rem;
+    right: 7rem;
+    top: 4rem;
+    background: $planCard;
+  }
+}
