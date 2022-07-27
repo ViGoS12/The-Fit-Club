@@ -1,0 +1,34 @@
+@import '../../scss/variables.scss';
+
+.footer {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 20rem;
+
+  &__line {
+    border: 1px solid $lightgray;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__social {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__img {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  &__logo {
+    width: 10rem;
+  }
+}
