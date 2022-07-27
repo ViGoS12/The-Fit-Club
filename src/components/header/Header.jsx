@@ -22,6 +22,7 @@ const Header = () => {
           <li>
             <Link
               to='home'
+              activeClass='active'
               spy={true}
               smooth={true}
               className={styles.header__item}

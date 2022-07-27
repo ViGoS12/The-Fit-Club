@@ -9,6 +9,7 @@ import Calories from './../../assets/calories.png'
 import Hero_img from './../../assets/hero_image.png'
 import Hero_img_back from './../../assets/hero_image_back.png'
 import { motion } from 'framer-motion'
+import NumberCounter from 'number-counter'
 
 const Hero = () => {
   const transition = { type: 'spring', duration: 3 }
@@ -42,15 +43,33 @@ const Hero = () => {
         </div>
         <div className={styles.figures}>
           <div className={styles.figures__column}>
-            <span className={styles.figures__numbers}>+ 140</span>
+            <NumberCounter
+              className={styles.figures__numbers}
+              end={140}
+              start={100}
+              delay='4'
+              preFix='+'
+            />
             <span className={styles.figures__subtext}>Expert coaches</span>
           </div>
           <div className={styles.figures__column}>
-            <span className={styles.figures__numbers}>+ 978</span>
+            <NumberCounter
+              className={styles.figures__numbers}
+              end={978}
+              start={800}
+              delay='4'
+              preFix='+'
+            />
             <span className={styles.figures__subtext}>Members joined</span>
           </div>
           <div className={styles.figures__column}>
-            <span className={styles.figures__numbers}>+ 50</span>
+            <NumberCounter
+              className={styles.figures__numbers}
+              end={50}
+              start={30}
+              delay='4'
+              preFix='+'
+            />
             <span className={styles.figures__subtext}>Fintess programs</span>
           </div>
         </div>
