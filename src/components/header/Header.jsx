@@ -1,19 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Header.module.scss'
-import logo from '../../assets/logo.png'
+import Logo from '../../assets/logo.png'
+import Bars from '../../assets/bars.png'
+import { Link } from 'react-scroll'
 
 const Header = () => {
+  const mobile = window.innerWidth <= 768 ? true : false
+  const [isVisible, setIsVisible] = useState(false)
+
   return (
     <div className={styles.header}>
-      <img className={styles.header__logo} src={logo} alt='' />
-
-      <ul className={styles.header__list}>
-        <li className={styles.header__item}>Home</li>
-        <li className={styles.header__item}>Programs</li>
-        <li className={styles.header__item}>Why us</li>
-        <li className={styles.header__item}>Plans</li>
-        <li className={styles.header__item}>Testimonials</li>
-      </ul>
+      <img className={styles.header__logo} src={Logo} alt='' />
+      {isVisible === false && mobile === true ? (
+        <div
+          className={styles.header__burger_btn}
+          onClick={() => setIsVisible(true)}>
+          <img className={styles.header__bars} src={Bars} alt='' />
+        </div>
+      ) : (
+        <ul className={styles.header__list}>
+          <li>
+            <Link
+              to='home'
+              spy={true}
+              smooth={true}
+              className={styles.header__item}
+              onClick={() => setIsVisible(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='programs'
+              spy={true}
+              smooth={true}
+              className={styles.header__item}
+              onClick={() => setIsVisible(false)}>
+              Programs
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='reasons'
+              spy={true}
+              smooth={true}
+              className={styles.header__item}
+              onClick={() => setIsVisible(false)}>
+              Why us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='plans'
+              spy={true}
+              smooth={true}
+              className={styles.header__item}
+              onClick={() => setIsVisible(false)}>
+              Plans
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='testimonials'
+              spy={true}
+              smooth={true}
+              className={styles.header__item}
+              onClick={() => setIsVisible(false)}>
+              Testimonials
+            </Link>
+          </li>
+        </ul>
+      )}
     </div>
   )
 }

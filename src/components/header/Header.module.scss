@@ -10,12 +10,36 @@
     cursor: pointer;
   }
 
+  &__bars {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__burger_btn {
+    background-color: $appColor;
+    padding: 0.5rem;
+    border-radius: 20%;
+    position: fixed;
+    right: 2rem;
+    z-index: 99;
+    cursor: pointer;
+  }
+
   &__list {
     display: flex;
     gap: 2rem;
     color: white;
     align-content: center;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      background-color: $appColor;
+      padding: 2rem;
+      position: fixed;
+      right: 2rem;
+      z-index: 99;
+    }
   }
 
   &__item {

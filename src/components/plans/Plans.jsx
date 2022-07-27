@@ -16,7 +16,7 @@ const Plans = () => {
         <span>Your journey</span>
         <span className='stroke-text'>now withus</span>
       </div>
-      <div className={styles.plans}>
+      <div className={styles.plans} id='plans'>
         {plansData.map((plan, idx) => (
           <div className={styles.plan} key={idx}>
             <div
