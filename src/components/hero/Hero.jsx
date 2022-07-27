@@ -12,9 +12,9 @@ import Hero_img_back from './../../assets/hero_image_back.png'
 const Hero = () => {
   return (
     <div className={styles.hero}>
+      <div className={classNames(styles.hero__blur, 'blur')} />
       <div className={styles.hero__leftside}>
         <Header />
-
         <div className={styles.fitness_ads}>
           <div className={styles.fitness_ads__circle}></div>
           <span className={styles.fitness_ads__text}>

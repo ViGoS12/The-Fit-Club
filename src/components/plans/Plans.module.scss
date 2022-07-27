@@ -29,6 +29,18 @@
     cursor: pointer;
     font-size: 0.8rem;
   }
+
+  &__blur_l {
+    width: 22rem;
+    height: 30rem;
+    left: 0rem;
+  }
+  &__blur_r {
+    width: 22rem;
+    height: 30rem;
+    right: 0;
+    top: 20rem;
+  }
 }
 
 .plan {

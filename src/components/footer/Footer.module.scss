@@ -31,4 +31,17 @@
   &__logo {
     width: 10rem;
   }
+
+  &__blur_l {
+    width: 26rem;
+    height: 15rem;
+    left: 20%;
+    background: rgb(204, 113, 38);
+  }
+  &__blur_r {
+    width: 26rem;
+    height: 15rem;
+    right: 15%;
+    background-color: lightcoral;
+  }
 }

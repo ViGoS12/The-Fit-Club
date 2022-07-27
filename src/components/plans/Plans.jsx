@@ -10,6 +10,8 @@ const Plans = () => {
   return (
     <div className={styles.plans__container}>
       <div className={styles.plans__header}>
+        <div className={classNames(styles.plans__blur_l, 'blur')} />
+        <div className={classNames(styles.plans__blur_r, 'blur')} />
         <span className='stroke-text'>Ready to start</span>
         <span>Your journey</span>
         <span className='stroke-text'>now withus</span>
