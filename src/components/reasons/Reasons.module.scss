@@ -5,12 +5,21 @@
   display: flex;
   gap: 2rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &__leftside {
     flex: 1 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     grid-auto-rows: 1fr;
+
+    @media (max-width: 768px) {
+      grid-auto-rows: auto;
+      overflow: hidden;
+    }
   }
 
   &__img {
@@ -21,21 +30,37 @@
     width: 12rem;
     grid-row: 1/3;
     height: 28rem;
+
+    @media (max-width: 768px) {
+      width: 7rem;
+      height: 17rem;
+    }
   }
   &__image2 {
     width: auto;
     height: 16rem;
     grid-column: 2/4;
+    @media (max-width: 768px) {
+      width: 15rem;
+      height: 10rem;
+    }
   }
   &__image3 {
     width: 13.7rem;
     grid-column: 2/3;
     grid-row: 2;
+    @media (max-width: 768px) {
+      width: 7rem;
+    }
   }
   &__image4 {
     width: 10rem;
     grid-row: 2;
     grid-column: 3/4;
+    @media (max-width: 768px) {
+      width: 7rem;
+      height: 6rem;
+    }
   }
 
   &__rightside {

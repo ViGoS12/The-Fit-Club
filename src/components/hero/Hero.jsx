@@ -12,7 +12,7 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
   const transition = { type: 'spring', duration: 3 }
-
+  const mobile = window.innerWidth <= 768 ? true : false
   return (
     <div className={styles.hero}>
       <div className={classNames(styles.hero__blur, 'blur')} />
@@ -21,7 +21,7 @@ const Hero = () => {
         <div className={styles.fitness_ads}>
           <motion.div
             className={styles.fitness_ads__circle}
-            initial={{ left: '240px' }}
+            initial={{ left: mobile ? '185px' : '240px' }}
             whileInView={{ left: '9px' }}
             transition={transition}></motion.div>
           <span className={styles.fitness_ads__text}>
