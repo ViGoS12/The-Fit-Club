@@ -1,10 +1,15 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './Join.module.scss'
 import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
 
 const Join = () => {
   const form = useRef()
+  const [value, setValue] = useState('')
+
+  const onChangeInput = (event) => {
+    setValue(event.target.value)
+  }
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -24,6 +29,8 @@ const Join = () => {
           console.log(error.text)
         }
       )
+    alert('Successfully')
+    setValue('')
   }
   return (
     <div className={styles.join} id='join-us'>
@@ -45,6 +52,8 @@ const Join = () => {
           action=''
           className={styles.join__email}>
           <input
+            value={value}
+            onChange={onChangeInput}
             className={styles.join__input}
             type='email'
             name='user_email'
