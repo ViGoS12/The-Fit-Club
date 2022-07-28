@@ -8,7 +8,7 @@ import classNames from 'classnames'
 
 const Plans = () => {
   return (
-    <div className={styles.plans__container}>
+    <div className={styles.plans__container} id='plans'>
       <div className={styles.plans__header}>
         <div className={classNames(styles.plans__blur_l, 'blur')} />
         <div className={classNames(styles.plans__blur_r, 'blur')} />
@@ -16,7 +16,7 @@ const Plans = () => {
         <span>Your journey</span>
         <span className='stroke-text'>now withus</span>
       </div>
-      <div className={styles.plans} id='plans'>
+      <div className={styles.plans}>
         {plansData.map((plan, idx) => (
           <div className={styles.plan} key={idx}>
             <div

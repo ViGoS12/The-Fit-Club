@@ -11,7 +11,7 @@
   }
 
   &__container {
-    margin-top: -4rem;
+    margin-top: -2rem;
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,12 @@
     justify-content: center;
     text-transform: uppercase;
     font-style: italic;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      flex-direction: column;
+      font-size: xx-large;
+    }
   }
 
   &__more_btn {
@@ -54,6 +60,10 @@
   gap: 2rem;
   width: 15rem;
   padding: 1.5rem;
+
+  @media (max-width: 768px) {
+    width: fit-content;
+  }
 
   &__img {
     & > svg {

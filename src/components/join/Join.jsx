@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import styles from './Join.module.scss'
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
 
 const Join = () => {
   const form = useRef()
@@ -49,7 +50,14 @@ const Join = () => {
             name='user_email'
             placeholder='Enter your Email address'
           />
-          <button className={styles.join__btn}>Join Now</button>
+          <motion.button
+            className={styles.join__btn}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{
+              scale: 1,
+            }}>
+            Join Now
+          </motion.button>
         </form>
       </div>
     </div>

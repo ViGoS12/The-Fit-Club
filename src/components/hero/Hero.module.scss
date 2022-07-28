@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &__leftside {
     padding: 2rem;
     padding-top: 1.5rem;
@@ -96,19 +100,19 @@
     @media (max-width: 768px) {
       position: relative;
       width: 15rem;
-      left: 7rem;
+      left: 50%;
       top: 4rem;
-      align-self: center;
     }
   }
 
   &__image_back {
     position: absolute;
     top: 4rem;
-    right: 20rem;
+    right: 19rem;
     z-index: -1;
     width: 15rem;
     @media (max-width: 768px) {
+      position: relative;
       width: 15rem;
       left: 2rem;
       top: 0;
@@ -121,10 +125,6 @@
     @media (max-width: 768px) {
       width: 14rem;
     }
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
   }
 }
 
@@ -237,10 +237,14 @@
   right: 28rem;
   width: fit-content;
 
+  @media (max-width: 1220px) {
+    top: 37.5rem;
+  }
+
   @media (max-width: 768px) {
     position: relative;
-    top: 5rem;
-    left: 2rem;
+    top: -13rem;
+    left: 1rem;
   }
 
   &__img {

@@ -6,6 +6,7 @@ import Instagram from '../../assets/instagram.png'
 import LinkedIn from '../../assets/linkedin.png'
 import Logo from '../../assets/logo.png'
 import classNames from 'classnames'
+import { Link } from 'react-scroll'
 
 const Footer = () => {
   return (
@@ -20,7 +21,9 @@ const Footer = () => {
           <img className={styles.footer__img} src={LinkedIn} alt='' />
         </div>
         <div className=''>
-          <img className={styles.footer__logo} src={Logo} alt='' />
+          <Link to='home' spy={true} smooth={true}>
+            <img className={styles.footer__logo} src={Logo} alt='' />
+          </Link>
         </div>
       </div>
     </div>

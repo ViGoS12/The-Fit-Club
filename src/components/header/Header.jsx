@@ -7,9 +7,9 @@ import { Link } from 'react-scroll'
 const Header = () => {
   const mobile = window.innerWidth <= 768 ? true : false
   const [isVisible, setIsVisible] = useState(false)
-
+  console.log(isVisible)
   return (
-    <div className={styles.header}>
+    <div className={styles.header} id='home'>
       <img className={styles.header__logo} src={Logo} alt='' />
       {isVisible === false && mobile === true ? (
         <div

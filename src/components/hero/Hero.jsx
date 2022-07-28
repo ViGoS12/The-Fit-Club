@@ -15,7 +15,7 @@ const Hero = () => {
   const transition = { type: 'spring', duration: 3 }
   const mobile = window.innerWidth <= 768 ? true : false
   return (
-    <div className={styles.hero} id='home'>
+    <div className={styles.hero}>
       <div className={classNames(styles.hero__blur, 'blur')} />
       <div className={styles.hero__leftside}>
         <Header />
@@ -75,14 +75,22 @@ const Hero = () => {
         </div>
 
         <div className={styles.hero__buttons}>
-          <button
-            className={classNames(styles.hero__start_btn, styles.hero__btn)}>
+          <motion.button
+            className={classNames(styles.hero__start_btn, styles.hero__btn)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{
+              scale: 1,
+            }}>
             Get Started
-          </button>
-          <button
-            className={classNames(styles.hero__more_btn, styles.hero__btn)}>
+          </motion.button>
+          <motion.button
+            className={classNames(styles.hero__more_btn, styles.hero__btn)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{
+              scale: 1,
+            }}>
             Learn More
-          </button>
+          </motion.button>
         </div>
       </div>
       <div className={styles.hero__rightside}>
@@ -113,7 +121,7 @@ const Hero = () => {
           src={Hero_img_back}
           alt=''
           initial={{ right: '11rem' }}
-          whileInView={{ right: '20rem' }}
+          whileInView={{ right: '19rem' }}
           transition={transition}
         />
 
