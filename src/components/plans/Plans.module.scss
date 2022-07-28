@@ -11,12 +11,16 @@
   }
 
   &__container {
-    margin-top: -2rem;
+    margin-top: -3rem;
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     position: relative;
+
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
   }
 
   &__header {
@@ -32,6 +36,9 @@
       align-items: center;
       flex-direction: column;
       font-size: xx-large;
+    }
+    @media (max-width: 480px) {
+      text-align: center;
     }
   }
 
